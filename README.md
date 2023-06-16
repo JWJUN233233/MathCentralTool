@@ -1,16 +1,16 @@
 <div align="center">
-    <img width="175" src="/other/icon/MCT.png"></img>
+    <img width="175" src="/MCT.png"></img>
 </div>
 
-<h1 align="center">MathCentralTools</h1>
+<h1 align="center">MathCentralTool</h1>
 
 <div align="center">
 
-![下载](https://img.shields.io/github/downloads/FTS427/MathCentralTools/total?logo=github&label=下载&style=for-the-badge&color=44cc11)
-![星标](https://img.shields.io/github/stars/FTS427/MathCentralTools?logo=github&label=星标&style=for-the-badge)
-![协议](https://img.shields.io/github/license/FTS427/MathCentralTools?logo=github&label=协议&style=for-the-badge&color=ff7a35)
-![提议](https://img.shields.io/github/issues/FTS427/MathCentralTools?logo=github&lable=提议&style=for-the-badge "提议")
-![版本](https://img.shields.io/github/v/tag/FTS427/MathCentralTools?label=版本&style=for-the-badge "版本")
+![下载](https://img.shields.io/github/downloads/FTS427/MathCentralTool/total?logo=github&label=下载&style=for-the-badge&color=44cc11)
+![星标](https://img.shields.io/github/stars/FTS427/MathCentralTool?logo=github&label=星标&style=for-the-badge)
+![协议](https://img.shields.io/github/license/FTS427/MathCentralTool?logo=github&label=协议&style=for-the-badge&color=ff7a35)
+![提议](https://img.shields.io/github/issues/FTS427/MathCentralTool?logo=github&lable=提议&style=for-the-badge "提议")
+![版本](https://img.shields.io/github/v/tag/FTS427/MathCentralTool?label=版本&style=for-the-badge "版本")
 
 ![Archlinux](https://img.shields.io/badge/archlinux-1E90FF?style=for-the-badge&logo=archlinux&logoColor=white)
 ![Windows](https://img.shields.io/badge/windows-4682B4?style=for-the-badge&logo=windows&logoColor=white)
