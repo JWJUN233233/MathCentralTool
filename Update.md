@@ -1,6 +1,8 @@
 # 数学集成工具
 
-注：本更新日志从 v0.0.0.7 开始使用
+> 注：本更新日志从 v0.0.0.7 开始使用
+
+先前的版本参见[MathCentralTools](https://github.com/FTS427/MathCentralTools)（已归档）
 
 ## Stable
 
