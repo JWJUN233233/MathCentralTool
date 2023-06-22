@@ -18,7 +18,7 @@ void print(const char a[],int i)
     else if(i == 1)
         cout << a << endl;
     else
-        cout << "Code includes BUG!" << endl;
+        cout << "EEROR! Codes include BUG!" << endl;
 }
 
 void ERROR()
@@ -201,7 +201,7 @@ void D()
     while(true)
     {
         h1();
-        print("输入任意键继续，输入“\033[1;33mc\033[0m”退出...",1);
+        print("输入任意值继续，输入“\033[1;33mc\033[0m”退出...",1);
         cin >> q;
         if (q == 'c' || q == 'C')
         {
@@ -216,7 +216,7 @@ void D()
             {
                 cout << x << "是整数" << endl;
                 cout << x << "是正数" << endl;
-                cout << x << "是不分质数合数" << endl;
+                cout << x << "不分质数合数" << endl;
                 cout << x << "是偶数" << endl;
             }
             else
@@ -230,9 +230,9 @@ void D()
                 else
                     cout << x << "是负数" << endl;
                 if (x == 1)
-                    cout << x << "是不分质数合数" << endl;
+                    cout << x << "不分质数合数" << endl;
                 else if (int(x) - x != 0) 
-                    cout << x << "是不分质数合数" << endl;
+                    cout << x << "不分质数合数" << endl;
                 else
                 {
                     int n=0, i;
@@ -283,9 +283,10 @@ void E() //E函数,几何计算
     }
 }
 
-//M函数,简化主函数
-void M()
+//主函数部分
+int main()
 {
+    clear();
     h("集成数学工具");
     char u;
     while(true)
@@ -324,12 +325,5 @@ void M()
         else
             ERROR();
     }
-}
-
-//主函数部分
-int main()
-{
-    clear();
-	M();
 	return 0;
 }
