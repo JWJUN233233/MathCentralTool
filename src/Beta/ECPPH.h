@@ -2,6 +2,7 @@
 #include <cmath>
 
 using namespace std;
+
 //Easy C++ Head
 
 void error(){
