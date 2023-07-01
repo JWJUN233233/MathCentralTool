@@ -19,7 +19,7 @@ void print(const char a[],int i)
         cout << "Code includes BUG!" << endl;
 }
 
-void ERROR()
+void error()
 {
 	clear();
     print("\033[37;43;1mERROR!\033[0m",1);
@@ -73,7 +73,7 @@ void calc()
         else if (o == '/')
         {
             if (num2 == 0)
-                ERROR();
+                error();
             else
                 cout << num1 << "/" << num2 << "=" << num1/num2 << endl;
         }
@@ -82,7 +82,7 @@ void calc()
         {
             long int n=num2;
 			if (num1 == 0 && num2 == 0) 
-                ERROR(); 
+                error(); 
             else 
             { 
                 num3 = 1; 
@@ -102,7 +102,7 @@ void calc()
         }
         //报错
         else
-			ERROR();
+			error();
 	}
 }
 
@@ -170,7 +170,7 @@ void C()
                 print("请输入第二个数:",0);
                 cin >> num6;
                 if (num5 != int(num5) || num6 != int(num6))
-                    ERROR();
+                    error();
                 else
                     break;
             }
@@ -297,7 +297,7 @@ void M()
             h2();
         }
         else
-            ERROR();
+            error();
     }
 }
 

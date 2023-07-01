@@ -1,46 +1,8 @@
 ﻿//此版本为Beta测试版，有不稳定功能
 
-#include <iostream>
-#include <cmath>
-using namespace std;
+#include "ECPPH.h"
 
 char q;
-
-void clear()
-{
-    system("clear");
-}
-
-void print(const char a[],int i)
-{
-    if(i == 0)
-        cout << a ;
-    else if(i == 1)
-        cout << a << endl;
-    else
-        cout << "EEROR! Codes include BUG!" << endl;
-}
-
-void ERROR()
-{
-	clear();
-    print("\033[37;43;1mERROR!\033[0m",1);
-}
-
-void h1()
-{
-    print("--------------------",1);
-}
-
-void h2()
-{
-    print("*==================*",1);
-}
-
-void s(const char a[])
-{
-    cout << " - " << a << endl;
-}
 
 void h(const char a[])
 {
@@ -50,17 +12,17 @@ void h(const char a[])
 //calc函数,计算器
 void calc()
 {
-    clear();
+    clear(false);
     char o;
     long int num1, num2;
     long double num3;
     h("计算器");
-    print("\033[1;37;43m注意\033[0m：现仅只支持两个数之间的运算！",1);
+    print("\033[1;37;43m注意\033[0m：现仅只支持两个数之间的运算！",true);
 	while (true)
     {
         h1();
-        print("请输入计算式(+ - * / ^),输入'0c0'退出",1);
-        print("如: 1+1",1);
+        print("请输入计算式(+ - * / ^),输入'0c0'退出",true);
+        print("如: 1+1",true);
         cin >> num1 >> o >> num2;
         //加法
         if (o == '+')
@@ -75,7 +37,7 @@ void calc()
         else if (o == '/')
         {
             if (num2 == 0)
-                ERROR();
+                error();
             else
                 cout << num1 << "/" << num2 << "=" << num1/num2 << endl;
         }
@@ -84,7 +46,7 @@ void calc()
         {
             long int n=num2;
 			if (num1 == 0 && num2 == 0) 
-                ERROR(); 
+                error(); 
             else 
             { 
                 num3 = 1; 
@@ -99,37 +61,37 @@ void calc()
         //退出
         else if(o == 'c' && num1 == 0 && num2 ==0)
         {
-            clear();
+            clear(false);
             break;
         }
         //报错
         else
-			ERROR();
+			error();
 	}
 }
 
 //B函数,计算最大公约数
 void B()
 {
-    clear();
+    clear(false);
     long double num3, num4;
     h("最大公约数");
-    print("\033[1;43;37m注意\033[0m：本功能只支持两个数之间的运算！",1);
+    print("\033[1;43;37m注意\033[0m：本功能只支持两个数之间的运算！",true);
     while(true)
     {
         h1();
-        print("输入任意值继续，输入“\033[33;1mc\033[0m”退出...",1);
+        print("输入任意值继续，输入“\033[33;1mc\033[0m”退出...",true);
         cin >> q;
         if(q == 'c' || q == 'C')
         {
-            clear();
+            clear(false);
             break;
         }
         else
         {
-            print("请输入第一个数:",0);
+            print("请输入第一个数:",true);
             cin >> num3;
-            print("请输入第二个数:",0);
+            print("请输入第二个数:",true);
             cin >> num4;
             num3 = abs(num3);
             num4 = abs(num4);
@@ -148,17 +110,17 @@ void B()
 //C函数,计算最小公倍数
 void C()
 {
-    clear();
+    clear(false);
     h("最小公倍数");
-    print("\033[1;43;37m注意\033[0m：本功能只支持两个数之间的运算!",1);
+    print("\033[1;43;37m注意\033[0m：本功能只支持两个数之间的运算!",true);
     while(true)
     {
         h1();
-        print("输入任意值继续，输入“\033[33;1mc\033[0m”退出...",1);
+        print("输入任意值继续，输入“\033[33;1mc\033[0m”退出...",true);
         cin >> q;
         if(q == 'c' || q == 'C')
         {
-            clear();
+            clear(false);
             break;
         }
         else
@@ -167,12 +129,12 @@ void C()
             long double num5, num6;
             while (true)
             {
-                print("请输入第一个数:",0);
+                print("请输入第一个数:",true);
                 cin >> num5;
-                print("请输入第二个数:",0);
+                print("请输入第二个数:",true);
                 cin >> num6;
                 if (num5 != int(num5) || num6 != int(num6))
-                    ERROR();
+                    error();
                 else
                     break;
             }
@@ -195,22 +157,22 @@ void C()
 //D函数,数值分析器
 void D()
 {
-    clear();
+    clear(false);
     long double x, a;
     h("数值分析器");
     while(true)
     {
         h1();
-        print("输入任意值继续，输入“\033[1;33mc\033[0m”退出...",1);
+        print("输入任意值继续，输入“\033[1;33mc\033[0m”退出...",true);
         cin >> q;
         if (q == 'c' || q == 'C')
         {
-            clear();
+            clear(false);
             break;
         }
         else
         {
-            print("请输入一个数:",0);
+            print("请输入一个数:",true);
             cin >> x;
             if (x == 0)
             {
@@ -269,11 +231,11 @@ void E() //E函数,几何计算
     while(true)
     {
         h1();
-        print("输入任意键继续，输入“\033[1;33mc\033[0m”退出...",1);
+        print("输入任意键继续，输入“\033[1;33mc\033[0m”退出...",true);
         cin >> q;
         if (q == 'c' || q == 'C')
         {
-            clear();
+            clear(false);
             break;
         }
         else
@@ -286,7 +248,7 @@ void E() //E函数,几何计算
 //主函数部分
 int main()
 {
-    clear();
+    clear(false);
     h("集成数学工具");
     char u;
     while(true)
@@ -299,7 +261,7 @@ int main()
         s("\033[1;33m(5)\033[33m几何\033[0m");
         s("\033[0m(a)关于\033[0m");
         s("\033[1;33m(e)退出\033[0m");
-        print("请键入所需功能：",0);
+        print("请键入所需功能：",false);
         cin >> u;
         if (u == '1')
             calc();
@@ -315,15 +277,15 @@ int main()
 		    break;
         else if (u == 'A'  || u == 'a' )
         {
-            clear();
+            clear(false);
             h2();
-            s("MCT Beta v0.0.1.2-1");
+            s("MCT Beta v0.0.1.2-2");
             s("Made by FTS427");
             s("Github : https://github.com/FTS427/MathCentralTool");
             h2();
         }
         else
-            ERROR();
+            error();
     }
 	return 0;
 }
