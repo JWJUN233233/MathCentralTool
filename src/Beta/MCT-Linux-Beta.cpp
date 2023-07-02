@@ -1,9 +1,12 @@
 ﻿//此版本为Beta测试版，有不稳定功能
 
 #include "EH.h"
-#include <cmath>
 
 char q;
+
+void s(const char T[]){
+    cout<<" - "<<T<<endl;
+}
 
 void hy(const char T[]){
     cout << "欢迎使用" << T << "功能！" << endl;
@@ -16,7 +19,7 @@ void calc(){
     long int num1, num2;
     long double num3;
     hy("计算器");
-    print("\033[1;37;43m注意\033[0m：现仅只支持两个数之间的运算！",7,true);
+    print("\033[1;37;43m注意\033[0m：现仅只支持两个数之间的运算！",0,true);
 	while (true){
         h("-",20,2);
         print("请输入计算式(+ - * / ^),输入'0c0'退出",0,true);
@@ -74,11 +77,11 @@ void B()
     clear(0);
     long double num3, num4;
     hy("最大公约数");
-    print("\033[1;43;37m注意\033[0m：本功能只支持两个数之间的运算！",7,true);
+    print("\033[1;43;37m注意\033[0m：本功能只支持两个数之间的运算！",0,true);
     while(true)
     {
         h("-",20,2);
-        print("输入任意值继续，输入“\033[33;1mc\033[0m”退出...",7,true);
+        print("输入任意值继续，输入“\033[33;1mc\033[0m”退出...",0,true);
         cin >> q;
         if(q == 'c' || q == 'C')
         {
@@ -110,11 +113,11 @@ void C()
 {
     clear(0);
     hy("最小公倍数");
-    print("\033[1;43;37m注意\033[0m：本功能只支持两个数之间的运算!",7,true);
+    print("\033[1;43;37m注意\033[0m：本功能只支持两个数之间的运算!",0,true);
     while(true)
     {
         h("-",20,2);
-        print("输入任意值继续，输入“\033[33;1mc\033[0m”退出...",7,true);
+        print("输入任意值继续，输入“\033[33;1mc\033[0m”退出...",0,true);
         cin >> q;
         if(q == 'c' || q == 'C')
         {
@@ -229,7 +232,7 @@ void E() //E函数,几何计算
     while(true)
     {
         h("-",20,2);
-        print("输入任意键继续，输入“\033[1;33mc\033[0m”退出...",7,true);
+        print("输入任意键继续，输入“\033[1;33mc\033[0m”退出...",0,true);
         cin >> q;
         if (q == 'c' || q == 'C')
         {
@@ -277,7 +280,7 @@ int main()
         {
             clear(0);
             h("=",20,6);
-            s("MCT Beta v0.0.1.2-2");
+            s("MCT Beta v0.0.1.2-3");
             s("Made by FTS427");
             s("Github : https://github.com/FTS427/MathCentralTool");
             h("=",20,6);
